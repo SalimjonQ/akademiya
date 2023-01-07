@@ -1,0 +1,125 @@
+.nav-menu{
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .header{
+    padding: 0;
+    margin: 0;
+  }
+
+  .container{
+    width: 100%;
+  }
+  .menu-item, 
+  .logo-img{
+    display: none;
+  }
+  .nav-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    width: 100%;
+  }
+  .nav-item{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .burger-menu{
+    height: 100%;
+    width: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .burger-bar{
+    width: 4em;
+    height: .5em;
+    background-color: #fff;
+    border-radius: 0.5em;
+  }
+
+  .menu{
+    width: 50% ;
+    height: 100vh;
+    background-color: #00092ca9;
+    position: absolute;
+    top: 4.6em;
+    z-index: 1;
+    padding-top: 20px;
+  }
+
+  .menu ul{
+    list-style: none;
+  }
+
+  .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+  }
+
+  .menu ul li a:hover{
+    color: #00ABB3;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .visible{
+    display: inherit;
+  }
+
+  .burger-bar.clicked:nth-child(1){
+    transform: rotate(45deg) translate(.75em, 1.25em);
+    transition: ease-out .5s;
+  }
+
+  .burger-bar.clicked:nth-child(2){
+    transform: scale(0);
+    transition: ease-out 0.5s;
+  }
+
+  .burger-bar.clicked:nth-child(3){
+    transform: rotate(135deg) translate(-0.5em, 1em);
+    transition: ease-out .5s;
+  }
+
+  .burger-bar.unclicked{
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu{
+    width: 60% ;
+    height: 100vh;
+    background-color: #00092ca9;
+    position: absolute;
+    top: 4.5em;
+    z-index: 1;
+    padding-top: 20px;
+  }
+  .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+  }
+}
+
+
